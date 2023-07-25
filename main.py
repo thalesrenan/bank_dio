@@ -1,5 +1,6 @@
 import textwrap
 
+
 def menu():
     menu = """\n
     [1]\tDepositar
@@ -68,7 +69,7 @@ def create_user(users):
     birthdate = input("Informe a data de nascimento: ")
     address = input("Informe o endereço (logradouro, nr, bairro, cidade/estado): ")
 
-    users.append({"name":name, "birthdate":birthdate, "cpf":cpf, "address":address})
+    users.append({"name": name, "birthdate": birthdate, "cpf": cpf, "address": address})
 
     print("Usuário criado com sucesso!")
 
@@ -84,7 +85,7 @@ def create_account(agency, acc_num, users):
 
     if user:
         print("Conta criada com sucesso!")
-        return {"agency":agency, "acc_number":acc_num, "user":user}
+        return {"agency": agency, "acc_num": acc_num, "user": user}
 
     print("Usuário não encontrado!")
 
@@ -93,11 +94,11 @@ def list_acc(accs):
     for acc in accs:
         line = f"""
         Agência: {acc['agency']}
-        C/C: {acc['acc_number']}
+        C/C: {acc['acc_num']}
         Titular: {acc['user']['name']}
         """
-    print("=" * 100)
-    print(textwrap.dedent(line))
+        print("=" * 100)
+        print(textwrap.dedent(line))
 
 
 def main():
