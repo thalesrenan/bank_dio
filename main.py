@@ -90,7 +90,6 @@ def create_account(agency, acc_num, users):
 
 
 def list_acc(accs):
-    global line
     for acc in accs:
         line = f"""
         Agência: {acc['agency']}
